@@ -6,7 +6,6 @@ import CustomButton from "../custom-button/custom-button.component";
 import { auth, createUserProfileDocument } from "../../firebase/firebase.util";
 
 import "./sign-up.styles.scss";
-import { firestore } from "../../firebase/firebase.util";
 
 class SignUp extends React.Component {
   constructor() {
@@ -56,42 +55,42 @@ class SignUp extends React.Component {
   render() {
     const { displayName, email, password, confirmPassword } = this.state;
     return (
-      <div className="sign-up">
-        <h2 className="title">I do not have an account </h2>
-        <form className="sign-up-form" onSubmit={this.submitHandler}>
+      <div className='sign-up'>
+        <h2 className='title'>I do not have an account </h2>
+        <form className='sign-up-form' onSubmit={this.submitHandler}>
           <FormInput
-            type="text"
-            name="displayName"
+            type='text'
+            name='displayName'
             value={displayName}
             onChange={this.changeHandler}
-            label="Display Name"
+            label='Display Name'
             required
           />
           <FormInput
-            type="email"
-            name="email"
+            type='email'
+            name='email'
             value={email}
             onChange={this.changeHandler}
-            label="Email"
+            label='Email'
             required
           />
           <FormInput
-            type="password"
-            name="password"
+            type='password'
+            name='password'
             value={password}
             onChange={this.changeHandler}
-            label="Password"
+            label='Password'
             required
           />
           <FormInput
-            type="password"
-            name="confirmPassword"
+            type='password'
+            name='confirmPassword'
             value={confirmPassword}
             onChange={this.changeHandler}
-            label="confirm Password"
+            label='confirm Password'
             required
           />
-          <CustomButton type="submit">SIGN UP</CustomButton>
+          <CustomButton type='submit'>SIGN UP</CustomButton>
         </form>
       </div>
     );
